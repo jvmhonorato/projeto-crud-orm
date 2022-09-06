@@ -4,6 +4,7 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT || 3000
 const pessoas = require('./routes/pessoas')
+const model = require('./models/index')
 
 
 //STATIC FILES
@@ -30,4 +31,6 @@ app.use('/pessoas', pessoas)
 
 
 //LISTEN PORT
-app.listen(port, () => console.log('CRUD-ORM Listening...'))
+model.sync().then(() => {
+    app.listen(port, () => console.log('CRUD-ORM Listening...'))
+})

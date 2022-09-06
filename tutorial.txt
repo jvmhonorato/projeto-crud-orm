@@ -7,3 +7,5 @@
 4: criar pasta view, models , controllers, routes, public
 
 5: lembrar da lógica de criação sempre iniciar a função em controllers depois chamr na routes e por ultimo importar em index.js pra renderizar n servidor
+
+6: criar models/index.js  e pessoa.js
