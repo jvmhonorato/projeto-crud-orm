@@ -39,16 +39,6 @@ module.exports = {
 }
    
 
-// 
-// 
-// 
-
-
-
-// module.exports ={
-//     sequelize,
-//     models
-// }
 
 
 //sequelize.sync().then(() => console.log('synced'))

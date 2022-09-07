@@ -13,4 +13,8 @@
 7; depois feita a interação do sequelize com o models dinãmicos tracar as rotas em routes/pessoas.js usando .bind()quando houver interação com os models
 ]8: crair em views pasta pessoa pra começar a contrução do front end
 
-9: em create.ejs crimaoms o formulário lembrando qie ID e FOR no label e input é que vai fazer a interação com o cliente e o name e que vai pro servidor
+9: em create.ejs criamos o formulário lembrando qie ID, NAME e FOR no label e input é que vai fazer a interação com o cliente e o name e que vai pro servidor
+
+10: depois da tabela criada caso um novo campo seja inserido tera que usar o force: true no call da porta pra força~r a criação dropando a tabela antiga e criando uma nova, entretanto tomar cuidado com os dados que ja foram inseridos
+
+11:criar views/pessoas/index.ejs pra renderizar retorno dos dados do banco de dados

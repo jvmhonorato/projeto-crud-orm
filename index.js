@@ -32,7 +32,7 @@ app.use('/pessoas', pessoas)
 
 
 
-//LISTEN PORT
+//LISTEN PORT...  usar o force:true pra atualizar tabela
 model.sequelize.sync().then(() => {
     app.listen(port, () => console.log('CRUD-ORM Listening...'))
 })
