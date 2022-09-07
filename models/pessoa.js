@@ -1,11 +1,12 @@
 
+    const { Sequelize } = require("sequelize");
+    //MODEL DE CRIAÇÃO
+    const PessoaModel = (sequelize) => {
+        const Pessoa = sequelize.define('Pessoa', {
+            nome: Sequelize.STRING,
+            cargo: Sequelize.STRING
+        })
+        return Pessoa
+    }
 
-
-const PessoaModel=(sequelize, DataTypes)=>{
-    const Pessoa = sequelize.define('Pessoa', {
-        nome: DataTypes.STRING,
-        cargo: DataTypes.STRING
-    })
-    return Pessoa
-}
 module.exports = PessoaModel

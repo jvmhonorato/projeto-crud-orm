@@ -5,6 +5,7 @@ const app = express()
 const port = process.env.PORT || 3000
 const pessoas = require('./routes/pessoas')
 const model = require('./models/index')
+const bodyParser = require('body-parser')
 
 
 //STATIC FILES
@@ -13,6 +14,7 @@ app.use(express.static(__dirname +"public/css"));
 app.use(express.static(__dirname +"public/js"));
 app.use(express.static(__dirname +"public/img"));
 
+app.use(bodyParser.urlencoded({extended: true}))
 
 
 //configuração responsável por direcionar consulta a pasta view ao tipo de arquivo ejs TEMPLATE ENGINE 
@@ -31,6 +33,6 @@ app.use('/pessoas', pessoas)
 
 
 //LISTEN PORT
-model.sync().then(() => {
+model.sequelize.sync().then(() => {
     app.listen(port, () => console.log('CRUD-ORM Listening...'))
 })

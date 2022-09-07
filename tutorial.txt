@@ -1,6 +1,6 @@
 1: instalar o express: npm install express -save
 
-2:instalar: npm install ejs mysql2 sequelize
+2:instalar: npm install ejs mysql2 sequelize body-parser
 
 3: criar o index.js e configurar a criação do server exportando o express  criando os static files configurar porta pra ouvir na porta 3000
 
@@ -9,3 +9,5 @@
 5: lembrar da lógica de criação sempre iniciar a função em controllers depois chamr na routes e por ultimo importar em index.js pra renderizar n servidor
 
 6: criar models/index.js  e pessoa.js
+
+7
