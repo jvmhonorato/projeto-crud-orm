@@ -6,8 +6,11 @@
 
 4: criar pasta view, models , controllers, routes, public
 
-5: lembrar da lógica de criação sempre iniciar a função em controllers depois chamr na routes e por ultimo importar em index.js pra renderizar n servidor
+5: lembrar da lógica de criação sempre iniciar a função em controllers usando a interação dos models que contem  a chamda do banco de dados com o odelo de criação das colections/tabelas,  depois chamar na routesque é o ponto de interseção de models e controllers pra crição dos dados, e por ultimo importar em main index.js pra renderizar n servidor
 
-6: criar models/index.js  e pessoa.js
+6: criar models/index.js  e pessoa.js deixando a configuração de conexão do seuelize di index com os models. instruções comentadas no arquivo
 
-7
+7; depois feita a interação do sequelize com o models dinãmicos tracar as rotas em routes/pessoas.js usando .bind()quando houver interação com os models
+]8: crair em views pasta pessoa pra começar a contrução do front end
+
+9: em create.ejs crimaoms o formulário lembrando qie ID e FOR no label e input é que vai fazer a interação com o cliente e o name e que vai pro servidor

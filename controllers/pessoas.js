@@ -14,17 +14,19 @@ const index = async({Pessoa}, req, res) => {
     res.send(pessoas)
 }
 
-// //RENDERIZA FORMULÁRIO
-// const createForm = (req,res)=> {
-//     res.render('pessoas/create')
-// }
+//RENDERIZA FORMULÁRIO
+const createForm = (req,res)=> {
+    res.render('pessoas/create')
+}
 
-// //CRIA DADOS NO FORMULÁRIO
-// const createProcess = async({Pessoa}, req, res) => {
-//     res.send('create')
-// }
+//CRIA DADOS NO FORMULÁRIO
+const createProcess = async({Pessoa}, req, res) => {
+    res.send('create')
+}
 
 module.exports = {
-    index
+    index,
+    createForm,
+    createProcess
    
 }

@@ -14,10 +14,16 @@ const sequelize = new Sequelize('cadastro-orm', 'root','',{
 //IMPORT DOS MODELS MESCLANDO COM SEQUELIZE DB
 // const pessoa =  require(`${__dirname}/pessoa`)(sequelize)
 
+
+
+//IMPORT DINÂMICO DOS MODELS
 const models= {}
 fs
+//ler diretorio de forma sincrona
 .readdirSync(__dirname)
+//filtrar diretorio pra não ler o arquivo index.js
 .filter((file)=> file!=='index.js')
+//
 .forEach((file)=> {
     const model = require(path.join(__dirname,file))(sequelize)
 
