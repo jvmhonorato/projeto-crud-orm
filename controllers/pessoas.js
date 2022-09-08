@@ -18,10 +18,38 @@ const createProcess = async({Pessoa}, req, res) => {
     await Pessoa.create(req.body)
     res.redirect('/pessoas')
 }
+//REMOVE OS DADOS 
+const remove = async({Pessoa}, req,res)=> {
+    await Pessoa.destroy({
+        where:{
+            id:req.params.id
+        }
+    })
+    res.redirect('/pessoas')
+}
+//RENDERIZA  OS DADOS SALVOS
+const editForm = async({Pessoa}, req,res)=>{
+    const pessoa = await Pessoa.findByPk(req.params.id)
+    res.render('pessoas/edit', {pessoa})
+}
+
+//EDITA OS DADOS DINÂMICAMENTE
+const editProcess = async({Pessoa}, req,res)=>{
+    await Pessoa.update(req.body, {
+        where: {
+            id: req.params.id
+        }
+    })
+    res.redirect('/pessoas')
+}
+
 
 module.exports = {
     index,
     createForm,
-    createProcess
+    createProcess,
+    remove,
+    editForm,
+    editProcess
    
 }

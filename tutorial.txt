@@ -18,3 +18,8 @@
 10: depois da tabela criada caso um novo campo seja inserido tera que usar o force: true no call da porta pra força~r a criação dropando a tabela antiga e criando uma nova, entretanto tomar cuidado com os dados que ja foram inseridos
 
 11:criar views/pessoas/index.ejs pra renderizar retorno dos dados do banco de dados
+
+12:passar o metodo DELETE em controllers e em routes
+
+13: passar o metodo update em controllers e routes, em seguida criar edit.ejs com a mesma sintaxe de create.ejs acresentando apenas 
+value=<%=pessoa.nome%>"  pra fazer o link com os botões em pessoas/index.ejs

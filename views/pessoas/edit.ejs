@@ -1,20 +1,20 @@
 <%-include ('../partials/header')%>
 
-<h1>Nova Pessoa</h1>
+<h1>Nova Pessoa-</h1>
 <p><a href="/pessoas">Voltar para lista de pessoas</a></p>
 
 <form method="post">
 <div class="form-group">
     <label for="nome">Nome</label>
-    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome">
+    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" value="<%= pessoa.nome%>">
 </div>
 <div class="form-group">
     <label for="nome">Nascimento</label>
-    <input type="text" class="form-control" id="nascimento" name="nascimento" placeholder="Informe sua data de nascimento">
+    <input type="text" class="form-control" id="nascimento" name="nascimento" placeholder="Informe sua data de nascimento" value="<%= pessoa.nascimneto%>">
 </div>
 <div class="form-group">
     <label for="nome">Cargo</label>
-    <input type="text" class="form-control" id="cargo" name="cargo" placeholder="Digite seu cargo">
+    <input type="text" class="form-control" id="cargo" name="cargo" placeholder="Digite seu cargo" value="<%= pessoa.cargo%>">
 </div>
 <button type="submit" class="btn btn-default">Salvar</button>
 
