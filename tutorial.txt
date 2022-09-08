@@ -23,3 +23,7 @@
 
 13: passar o metodo update em controllers e routes, em seguida criar edit.ejs com a mesma sintaxe de create.ejs acresentando apenas 
 value=<%=pessoa.nome%>"  pra fazer o link com os botões em pessoas/index.ejs
+
+14: feito o crud  criar um novo models table usuario  usar o force: true pra dropa a tabela e crias usuario 
+
+15: pra linka as tabelas por assciação usamos no arquivo model um associate e um hasOne pra linkar a referência, depois no arquivo index criamos um condicional que pra cada model (forEach) da pasta models pegando com uma object.key , se nesse arquivo tivwer o associate como no caso de pessoa.js esse arquivo será associado a lista de models pre estabelecida ou seja o index.js vai likar o associates dinamicamente

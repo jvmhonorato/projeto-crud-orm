@@ -7,6 +7,16 @@
             cargo: Sequelize.STRING,
             nascimento:Sequelize.DATE
         })
+
+        //ASSOCIAR MODEL Pessoa AO MODEL Usuario   CRIAR REFERÊNCIA 
+        Pessoa.associate = (models) => {
+            Pessoa.hasOne(models.Usuario)
+        }
+        //OU usar destructure assignment
+        // Pessoa.associate = ({Usuario}) => {
+        //     Pessoa.hasOne(Usuario)
+        // }
+
         return Pessoa
     }
 
